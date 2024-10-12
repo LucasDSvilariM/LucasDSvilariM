@@ -1,4 +1,4 @@
-## Olá, eu sou o Lucas Vilarim 👋
+## Olá, eu sou o Lucas Vilarim estudante de programação 👋
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-vilarim-44b5801b5/)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/lucasvilariim/)
