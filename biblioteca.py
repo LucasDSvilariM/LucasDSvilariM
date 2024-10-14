@@ -139,3 +139,88 @@ class pessoa:
             print(f"{self.nome} acordou.")
         else:
             print(f"{self.nome} já estava acordado.")
+
+class vendedor:
+    def __init__(self, nome):
+        self.nome = nome
+        self.vendas = 0
+
+    def vendeu(self, vendas):
+        self.vendas = vendas
+
+    def bateu_meta(self, meta):
+        if self.vendas >= meta:
+            print(f"Vendedor {self.nome} bateu meta")
+        else:
+            print(f"Vendedor {self.nome} não bateu meta")
+
+class animal():
+    def __init__(self, nome, cor):
+        self.nome = nome
+        self.cor = cor
+
+    def comer(self):
+        if not self.comer:
+            self.comer = True
+        print(f"{self.nome} foi comer")
+
+class gato(animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+    def miar(self):
+        print(f"O {self.nome} está miando...")
+
+class Vaquinha(animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def mugir(self):
+        print(f"{self.nome} está mugindo")
+
+class Cachorro(animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def latir(self):
+        print(f"{self.nome} está latindo")
+
+class coelho(animal):
+    def __init__(self,nome,cor):
+        super().__init__(nome, cor)
+    def pulando(self):
+        print(f"{self.nome} está pulando")
+
+class atleta():
+    def __init__(self,nome, peso):
+        self.nome = nome
+        self.peso = peso
+        self.aposentado = False
+        self.aquecido = False
+
+    def aquecer(self):
+        if self.aquecido == False:
+            print(F"O {self.nome} foi aquecer.")
+            self.aquecido = True
+    def aposentar(self):
+        if self.aposentado:
+            print(f"{self.nome} foi aposentado")
+            self.aposentado = True
+class corredor(atleta):
+    def __init__(self,nome,peso):
+        super().__init__(nome, peso)
+    def correr(self):
+        if self.aquecido == True:
+            if self.aposentado == False:
+                print(f"O {self.nome} foi correr.")
+            else:
+                print(f"O {self.nome} não pode correr, porque está aposentado.")
+        else:
+            print(f"O {self.nome} não pode correr, porque não aqueceu.")
+
+    def aposentou(self):
+        if self.aquecido == False:
+            if self.aposentado == True:
+                print(f"O {self.nome} está aposentado.")
+            else:
+                print(f"O {self.nome} não pode aquecer, porque está aposentado.")
+        else:
+            print(f"O {self.nome} já está aposentado.")
