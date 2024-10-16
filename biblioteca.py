@@ -94,9 +94,6 @@ def menu():
         else:
             print("Opção inválida")
 
-
-# Iniciar o programa
-
 class pessoa:
     def __init__(self, nome):
        self.nome = nome
@@ -189,38 +186,18 @@ class coelho(animal):
     def pulando(self):
         print(f"{self.nome} está pulando")
 
-class atleta():
-    def __init__(self,nome, peso):
-        self.nome = nome
-        self.peso = peso
-        self.aposentado = False
-        self.aquecido = False
+# Exemplo de uso
+atleta1 = Triatleta("João", 75, 42)
 
-    def aquecer(self):
-        if self.aquecido == False:
-            print(F"O {self.nome} foi aquecer.")
-            self.aquecido = True
-    def aposentar(self):
-        if self.aposentado:
-            print(f"{self.nome} foi aposentado")
-            self.aposentado = True
-class corredor(atleta):
-    def __init__(self,nome,peso):
-        super().__init__(nome, peso)
-    def correr(self):
-        if self.aquecido == True:
-            if self.aposentado == False:
-                print(f"O {self.nome} foi correr.")
-            else:
-                print(f"O {self.nome} não pode correr, porque está aposentado.")
-        else:
-            print(f"O {self.nome} não pode correr, porque não aqueceu.")
+atleta1.aquecer()
+atleta1.aposentar()
+atleta1.correr()
+atleta1.nadar()
+atleta1.desaposentar()
 
-    def aposentou(self):
-        if self.aquecido == False:
-            if self.aposentado == True:
-                print(f"O {self.nome} está aposentado.")
-            else:
-                print(f"O {self.nome} não pode aquecer, porque está aposentado.")
-        else:
-            print(f"O {self.nome} já está aposentado.")
+atleta2 = Triatleta("Lucas", 65, 22)
+
+atleta2.peso = 65
+atleta2.idade = 22
+atleta2.desaposentar()
+atleta2.correr()
